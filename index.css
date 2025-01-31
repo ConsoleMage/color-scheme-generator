@@ -10,12 +10,27 @@ body {
     font-weight: 400;
 }
 
-body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "head"
-        "main"
-        "view"
-        "foot";
+.container {
+    display: flex;
+    margin: 100px auto 0;
+    height: 550px;
+    width: 550px;
+    background: #FFFDFE;
+    border: 2px solid red;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 550px;
+    height: 90px;
+    box-shadow: 0px 4px 11px 0px #00000026;
+    background: #FFFFFF;
+}
+
+.eye-dropper {
+    width: 61px;
+    height: 42px;
+    background: #F55A5A;
 }
