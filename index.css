@@ -12,11 +12,11 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column;
     margin: 100px auto 0;
     height: 550px;
     width: 550px;
     background: #FFFDFE;
-    border: 2px solid red;
 }
 
 header {
@@ -29,8 +29,14 @@ header {
     background: #FFFFFF;
 }
 
-.eye-dropper {
-    width: 61px;
-    height: 42px;
-    background: #F55A5A;
+main {
+    height: 414px;
+}
+
+#hex-footer {
+    width: 550px;
+    height: 46px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
