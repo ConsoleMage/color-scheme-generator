@@ -25,7 +25,6 @@ header {
     align-items: center;
     width: 550px;
     height: 90px;
-    border: 1px 0px 0px 0px;
     border: 1px solid #D1D5DB;
 }
 
@@ -37,7 +36,7 @@ header {
 #mode {
     width: 312px;
     height: 42px;
-    border-radius: 6px 0px 0px 0px;
+    border-radius: 6px;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -48,7 +47,7 @@ header {
 #get-button {
     width: 123px;
     height: 42px;
-    border-radius: 4px 0px 0px 0px;
+    border-radius: 4px;
     border: 1px solid #D1D5DB;
     box-shadow: 0px 1px 2px 0px #0000000D;
 }
