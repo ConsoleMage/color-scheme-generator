@@ -30,7 +30,14 @@ header {
 }
 
 main {
+    display: flex;
+    align-items: center;
     height: 414px;
+}
+
+#rectangle {
+    height: 414px;
+    width: 110px;
 }
 
 #hex-footer {
