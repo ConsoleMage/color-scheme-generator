@@ -25,14 +25,32 @@ header {
     align-items: center;
     width: 550px;
     height: 90px;
-    box-shadow: 0px 4px 11px 0px #00000026;
-    background: #FFFFFF;
+    border: 1px 0px 0px 0px;
+    border: 1px solid #D1D5DB;
 }
 
-.select-option {
+#color-picker {
+    width: 61px;
+    height: 42px;
+}
+
+#mode {
+    width: 312px;
+    height: 42px;
+    border-radius: 6px 0px 0px 0px;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+}
+
+#get-button {
+    width: 123px;
+    height: 42px;
+    border-radius: 4px 0px 0px 0px;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px 0px #0000000D;
 }
 
 main {
@@ -52,4 +70,7 @@ main {
 
 #color-hex {
     text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
 }
