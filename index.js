@@ -1,7 +1,40 @@
-let colorArray = [];
+let colorArray = [
+    {
+        hex: {
+            value: "#F55A5A"
+        }
+    },
+    {
+        hex: {
+            value: "#2B283A"
+        }
+    },
+    {
+        hex: {
+            value: "#FBF3AB"
+        }
+    },
+    {
+        hex: {
+            value: "#AAD1B6"
+        }
+    },
+    {
+        hex: {
+            value: "#A626D3"
+        }
+    }
+];
+
+let selectedMode = "";
+
+const button = document.getElementById("get-button");
+const colorScheme = document.getElementById("color-scheme");
+const mode = document.getElementById("mode");
 
 function renderScheme() {
     let html = "";
+    console.log(colorArray);
     for (let color of colorArray) {
         html += `
             <div id="rectangle-container">
@@ -11,11 +44,6 @@ function renderScheme() {
     }
     document.getElementById("color-scheme").innerHTML = html;
 }
-
-const button = document.getElementById("get-button");
-const colorScheme = document.getElementById("color-scheme");
-const mode = document.getElementById("mode");
-let selectedMode = "";
 
 mode.addEventListener("input", () => {
     selectedMode = mode.value;
@@ -27,6 +55,11 @@ button.addEventListener("click", () => {
         .then(response => response.json())
         .then(data => {
             colorArray.unshift(data);
+            if (colorArray.length > 5) {
+                colorArray.pop();
+            }
             renderScheme();
         });
 });
+
+renderScheme();
