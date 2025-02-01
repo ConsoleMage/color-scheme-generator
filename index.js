@@ -29,7 +29,6 @@ let colorArray = [
 let selectedMode = "";
 
 const button = document.getElementById("get-button");
-const colorScheme = document.getElementById("color-scheme");
 const mode = document.getElementById("mode");
 
 function renderScheme() {
