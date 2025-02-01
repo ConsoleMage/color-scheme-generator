@@ -1,5 +1,3 @@
-let selectedColor = "000000";
-let selectedMode = "Monochrome";
 let colorArray = [];
 
 function renderScheme() {
@@ -14,18 +12,21 @@ function renderScheme() {
     document.getElementById("color-scheme").innerHTML = html;
 }
 
-const seedColor = document.getElementById("color-picker");
-const mode = document.getElementById("mode");
 const button = document.getElementById("get-button");
 const colorScheme = document.getElementById("color-scheme");
+const mode = document.getElementById("mode");
+let selectedMode = "";
+
+mode.addEventListener("input", () => {
+    selectedMode = mode.value;
+});
 
 button.addEventListener("click", () => {
-    selectedColor = seedColor.value.substring(1);
-    selectedMode = mode.value;
-    fetch(`https://www.thecolorapi.com/id?hex=${selectedColor}&mode=${selectedMode}`)
+    const seedColor = document.getElementById("color-picker").value.substring(1);
+    fetch(`https://www.thecolorapi.com/id?hex=${seedColor}&mode=${selectedMode}`)
         .then(response => response.json())
         .then(data => {
             colorArray.unshift(data);
+            renderScheme();
         });
-    renderScheme();
 });

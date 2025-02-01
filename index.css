@@ -30,20 +30,21 @@ header {
 }
 
 main {
+    border: 2px solid red;
     display: flex;
     align-items: center;
     height: 414px;
 }
 
-#rectangle {
+#rectangle-container {
     height: 414px;
     width: 110px;
 }
 
-#hex-footer {
-    width: 550px;
-    height: 46px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+#rectangle {
+    height: 100%;
+}
+
+#color-hex {
+    text-align: center;
 }
