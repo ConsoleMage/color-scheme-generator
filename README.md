@@ -2,7 +2,7 @@
 
 A color-scheme-generator solo project, done from scratch on Scrimba :D
 
-![Untitled](https://github.com/user-attachments/assets/3ddabd4f-354d-4cf3-b446-b00a81a27ce2)
+![Untitled](https://github.com/user-attachments/assets/0806e12d-4f2c-4120-ab1c-b53046a277e9)
 
 ### DEMO
 https://glowing-kangaroo-46add0.netlify.app/
