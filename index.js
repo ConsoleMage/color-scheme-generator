@@ -26,7 +26,7 @@ let colorArray = [
     }
 ];
 
-let selectedMode = "#000000";
+let selectedMode = "monochrome";
 
 const button = document.getElementById("get-button");
 const mode = document.getElementById("mode");
@@ -44,7 +44,7 @@ function renderScheme() {
 }
 
 mode.addEventListener("input", () => {
-    selectedMode = mode.value;
+    selectedMode = mode.value.toLowerCase();
 });
 
 button.addEventListener("click", () => {
