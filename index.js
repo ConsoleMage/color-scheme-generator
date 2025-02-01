@@ -26,14 +26,13 @@ let colorArray = [
     }
 ];
 
-let selectedMode = "";
+let selectedMode = "#000000";
 
 const button = document.getElementById("get-button");
 const mode = document.getElementById("mode");
 
 function renderScheme() {
     let html = "";
-    console.log(colorArray);
     for (let color of colorArray) {
         html += `
             <div id="rectangle-container">
@@ -50,13 +49,10 @@ mode.addEventListener("input", () => {
 
 button.addEventListener("click", () => {
     const seedColor = document.getElementById("color-picker").value.substring(1);
-    fetch(`https://www.thecolorapi.com/id?hex=${seedColor}&mode=${selectedMode}`)
+    fetch(`https://www.thecolorapi.com/scheme?hex=${seedColor}&mode=${selectedMode}&count=5`)
         .then(response => response.json())
         .then(data => {
-            colorArray.unshift(data);
-            if (colorArray.length > 5) {
-                colorArray.pop();
-            }
+            colorArray = data.colors;
             renderScheme();
         });
 });
